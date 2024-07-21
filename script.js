@@ -6,11 +6,9 @@ const list = document.querySelector('#lista-de-tarefas');
 
 //Função ao teclar ENTER
 function addList(e) {
-    if (e.key === 'Enter' && input.value !== '') {
+    if (e.type === 'click' || (e.key === 'Enter' && input.value !== '')) {
         // Cria o elemento na memoria
         const removeIcon = document.createElement('span');
-        // Adiciona o "x" como texto do span
-        removeIcon.textContent = 'x';
         // Adiciona a classe no span
         removeIcon.classList.add('remove-item');
 
@@ -31,7 +29,8 @@ function addList(e) {
     }
 }
 
-
+// Evento de clique no botao
+document.querySelector('#add').addEventListener('click', addList);
 
 // Reconhece a tecla solta e roda a funcao addList
 input.addEventListener('keyup', addList)
