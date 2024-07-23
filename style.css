@@ -2,6 +2,16 @@ body {
   background-color: #111827;
   font-family: "Roboto", sans-serif !important;
 }
+.content {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .todo-list-container {
   background-color: #1f2937;
   padding: 10%;
@@ -32,14 +42,11 @@ li {
 }
 .remove-item {
   height: 30px;
+  margin-left: 10px;
 }
 .remove-item:hover {
   cursor: pointer;
 }
-/* 
-.remove-item::before {
-  content: "x";
-} */
 
 /* INPUT E BOTAO */
 .form {
