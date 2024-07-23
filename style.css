@@ -1,12 +1,17 @@
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+body {
+  background-color: #111827;
+  font-family: "Roboto", sans-serif !important;
 }
 .todo-list-container {
-  background-color: #ebebeb;
-  padding: 5%;
+  background-color: #1f2937;
+  padding: 10%;
   border-radius: 20px;
+}
+h1 {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
 ul {
   display: flex;
@@ -14,13 +19,72 @@ ul {
 }
 li {
   list-style: none;
+  margin: 8px 0;
+  background-color: #374151;
+  border-radius: 10px;
+  height: 40px;
+  color: #b2b2b2;
   display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 1.1rem;
   justify-content: space-between;
-  margin: 5px 0;
+}
+.remove-item {
+  height: 30px;
 }
 .remove-item:hover {
   cursor: pointer;
 }
-input {
+/* 
+.remove-item::before {
+  content: "x";
+} */
+
+/* INPUT E BOTAO */
+.form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #4b5563;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
   width: 100%;
+}
+
+.form input {
+  background-color: #374151;
+  color: #b2b2b2;
+  font-family: "Roboto", sans-serif;
+  height: 40px;
+  padding: 0 10px;
+  border: none;
+  flex: 1;
+  outline: none;
+  font-size: 1rem;
+}
+
+form.input::placeholder {
+  color: #b2b2b2;
+  font-size: 1rem;
+}
+
+.form button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 10%;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+.form button span {
+  font-size: 1.2rem;
+  font-weight: bold;
 }

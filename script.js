@@ -6,10 +6,11 @@ const list = document.querySelector('#lista-de-tarefas');
 
 //Função ao teclar ENTER
 function addList(e) {
-    if (e.type === 'click' || (e.key === 'Enter' && input.value !== '')) {
-        // Cria o elemento na memoria
-        const removeIcon = document.createElement('span');
-        // Adiciona a classe no span
+    if (input.value !== '' & (e.key === 'Enter' || e.type === 'click')) {
+        // Cria o elemento icone na memoria
+        const removeIcon = document.createElement('img');
+        removeIcon.src = 'trash.png'
+        // Adiciona a classe no icone
         removeIcon.classList.add('remove-item');
 
         // Cria o elemento li na memoria
